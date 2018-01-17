@@ -97,14 +97,20 @@ public class MusicOrganizer
     
     /**
      * Listamos de aquellos archivos 
-     * que coinciden con la coincidencia que buscamos.
+     * que coinciden con la cadena que buscamos.
      */
     public void listMatching(String searchString)
     {
+        boolean comprobacionCoincidencias = false;
         for(String filename : files){
             if(filename.contains(searchString)){
                 System.out.println(filename);
+                comprobacionCoincidencias = true;
             }
+        }
+        
+        if (!comprobacionCoincidencias){
+            System.out.println("No se ha encontrado ninguna coincidencia");
         }
     }
 }
