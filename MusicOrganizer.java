@@ -94,4 +94,17 @@ public class MusicOrganizer
             position ++;
         }
     }
+    
+    /**
+     * Listamos de aquellos archivos 
+     * que coinciden con la coincidencia que buscamos.
+     */
+    public void listMatching(String searchString)
+    {
+        for(String filename : files){
+            if(filename.contains(searchString)){
+                System.out.println(filename);
+            }
+        }
+    }
 }
