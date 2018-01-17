@@ -113,4 +113,17 @@ public class MusicOrganizer
             System.out.println("No se ha encontrado ninguna coincidencia");
         }
     }
+    
+    /**
+     * Reproduce los primeros segundos de las canciones 
+     * del artista especificado por el parametro introducido.
+     */
+    public void cacionesArtista(String artista){
+        for (String filename : files){
+            if(filename.contains(artista)){
+                player.playSample(filename);
+            }
+        }
+    }
+    
 }
