@@ -88,8 +88,10 @@ public class MusicOrganizer
      */
     public void listAllFiles()
     {
+        int position = 1;
         for(String archivo : files){
-            System.out.println(archivo);
+            System.out.println(position + ": " + archivo);
+            position ++;
         }
     }
 }
